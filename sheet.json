@@ -4,5 +4,21 @@
   "authors": "ToI authors",
   "roll20userid": "0",
   "preview": "preview.png",
-  "instructions": "Scheda Tales of Irmakera"
+  "instructions": "Scheda Tales of Irmakera",
+  "sheet": {
+    "html": "<div class=\"sheet-container\">\n  <h1>Personaggio Tales of Irmakera</h1>\n\n  <!-- ANAGRAFICA + TRATTI SPECIALI -->\n  <div class=\"sheet-top-grid\">\n    <fieldset>\n      <legend>Anagrafica</legend>\n      <div class=\"sheet-grid-2\">\n        <div class=\"sheet-field\"><label>Nome Giocatore</label><input type=\"text\" name=\"attr_nome_giocatore\"></div>\n        <div class=\"sheet-field\"><label>Nome Personaggio</label><input type=\"text\" name=\"attr_nome_personaggio\"></div>\n        <div class=\"sheet-field\"><label>Razza</label><input type=\"text\" name=\"attr_razza\"></div>\n        <div class=\"sheet-field\"><label>Classe</label><input type=\"text\" name=\"attr_classe\"></div>\n        <div class=\"sheet-field\"><label>Cultura</label><input type=\"text\" name=\"attr_cultura\"></div>\n        <div class=\"sheet-field\"><label>Origini</label><input type=\"text\" name=\"attr_origini\"></div>\n        <div class=\"sheet-field\"><label>Livello</label><input type=\"text\" name=\"attr_livello\"></div>\n        <div class=\"sheet-field\"><label>Reputazione</label><input type=\"text\" name=\"attr_reputazione\"></div>\n        <div class=\"sheet-field\"><label>Lingue Conosciute</label><input type=\"text\" name=\"attr_lingue\"></div>\n      </div>\n    </fieldset>\n  </div>\n\n  <!-- TALENTI -->\n  <fieldset class=\"sheet-talento\">\n    <legend>Talenti</legend>\n    <fieldset class=\"repeating_talento\"></fieldset>\n    <div class=\"sheet-field\">\n      <label>Talento</label>\n      <textarea name=\"attr_talento\"></textarea>\n    </div>\n  </fieldset>\n\n  <!-- EQUIPAGGIAMENTO -->\n  <fieldset class=\"sheet-equipaggiamento\">\n    <legend>Equipaggiamento</legend>\n    <fieldset class=\"repeating_equipaggiamento\">\n      <div class=\"sheet-field field-wide\"><label>Nome</label><input type=\"text\" name=\"attr_eq_nome\"></div>\n      <div class=\"sheet-field field-small\"><label>Peso unitario</label><input type=\"number\" name=\"attr_eq_peso_unitario\" min=\"0\" step=\"0.1\"></div>\n      <div class=\"sheet-field field-small\"><label>Qtà</label><input type=\"number\" name=\"attr_eq_qta\" min=\"0\" step=\"1\"></div>\n      <div class=\"sheet-field field-small\"><label>Peso totale</label><input type=\"number\" name=\"attr_eq_peso_totale\" disabled></div>\n    </fieldset>\n\n    <div class=\"sheet-field field-small\">\n      <label>Peso complessivo</label>\n      <input type=\"number\" name=\"attr_peso_complessivo\" disabled>\n    </div>\n  </fieldset>\n</div>",
+    "css": ".sheet-container { font-family: 'Georgia', serif; background: #1a1a1a; color: #d4af37; padding: 16px; max-width: 1400px; margin: 0 auto; }\nfieldset { border: 2px solid #b08d57; padding: 12px; margin-bottom: 12px; background: rgba(20,20,20,0.85); }\nlegend { font-weight: bold; font-size: 1em; color: #d4af37; background: rgba(0,0,0,0.6); padding: 4px 10px; border-radius: 4px; }\n.sheet-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }\n.sheet-field { display: flex; flex-direction: column; gap: 2px; }\n.sheet-field label { font-size: 0.85em; color: #d4af37; text-transform: uppercase; }\n.sheet-field input, .sheet-field textarea { padding: 4px 6px; font-size: 0.9em; border: 1px solid #b08d57; background: #9f851d45; color: #e6d8a2; }\n.sheet-talento .repeating_talento, .sheet-equipaggiamento .repeating_equipaggiamento { display: grid; grid-template-columns: 2.5fr 0.7fr 0.7fr 0.7fr; gap: 6px; align-items: center; row-gap: 8px; }\n.sheet-field.field-wide input { width: 100%; }\n.sheet-field.field-small input { width: 3.2em; text-align: center; }",
+    "roll20workers": [
+      {
+        "attribute": "attr_eq_peso_totale",
+        "action": "compute",
+        "formula": "attr_eq_peso_unitario * attr_eq_qta"
+      },
+      {
+        "attribute": "attr_peso_complessivo",
+        "action": "compute",
+        "formula": "sum(@{repeating_equipaggiamento|attr_eq_peso_totale})"
+      }
+    ]
+  }
 }
