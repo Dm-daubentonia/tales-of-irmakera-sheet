@@ -1,0 +1,724 @@
+<div class="sheet-container">
+
+  <h1>Personaggio Tales of Irmakera</h1>
+
+  <!-- ANAGRAFICA + TRATTI SPECIALI -->
+  <div class="sheet-top-grid">
+
+    <!-- ANAGRAFICA -->
+    <fieldset>
+      <legend>Anagrafica</legend>
+
+      <div class="sheet-grid-2">
+
+        <div class="sheet-field">
+          <label>Nome Giocatore</label>
+          <input type="text" name="attr_nome_giocatore">
+        </div>
+
+        <div class="sheet-field">
+          <label>Nome Personaggio</label>
+          <input type="text" name="attr_nome_personaggio">
+        </div>
+
+        <div class="sheet-field">
+          <label>Razza</label>
+          <input type="text" name="attr_razza">
+        </div>
+
+        <div class="sheet-field">
+          <label>Classe</label>
+          <input type="text" name="attr_classe">
+        </div>
+
+        <div class="sheet-field">
+          <label>Cultura</label>
+          <input type="text" name="attr_cultura">
+        </div>
+
+        <div class="sheet-field">
+          <label>Origini</label>
+          <input type="text" name="attr_origini">
+        </div>
+
+        <div class="sheet-field">
+          <label>Livello</label>
+          <input type="text" name="attr_livello">
+        </div>
+
+        <div class="sheet-field">
+          <label>Reputazione</label>
+          <input type="text" name="attr_reputazione">
+        </div>
+        
+           <div class="sheet-field">
+          <label>Lingue Conosciute</label>
+          <input type="text" name="attr_reputazione">
+        </div>
+        
+        <fieldset class="sheet-talento">
+        <legend>Talenti</legend>
+
+        <fieldset class="repeating_talento"></fieldset>
+        <div class="sheet-field">
+        <label>Talento</label>
+        <textarea name="attr_talento"></textarea>
+      </div>
+      </fieldset>    
+
+      </div>
+    </fieldset>
+
+    <!-- TRATTI SPECIALI -->
+    <fieldset>
+      <legend>Tratti Speciali</legend>
+
+      <div class="sheet-field">
+        <label>Razziali</label>
+        <textarea name="attr_tratti_razziali"></textarea>
+      </div>
+
+      <div class="sheet-field">
+        <label>Culturali</label>
+        <textarea name="attr_tratti_culturali"></textarea>
+      </div>
+
+      <div class="sheet-field">
+        <label>Origini</label>
+        <textarea name="attr_tratti_origini"></textarea>
+      </div>
+
+      <div class="sheet-field">
+        <label>Motivazione</label>
+        <textarea name="attr_motivazione"></textarea>
+      </div>
+
+      <div class="sheet-field">
+        <label>Lingue conosciute</label>
+        <textarea name="attr_lingue"></textarea>
+      </div>
+
+    </fieldset>
+
+  </div>
+</div>
+
+
+  <!-- CARATTERISTICHE -->
+  <fieldset class="sheet-caratteristiche">
+  <legend>Caratteristiche</legend>
+
+  <div class="sheet-caratteristiche-grid">
+
+    <!-- COSTITUZIONE -->
+<div class="sheet-caratteristica">
+
+  <!-- TITOLO + VALORE PRINCIPALE -->
+  <div class="sheet-caratteristica-header">
+    <span class="sheet-caratteristica-name">Costituzione</span>
+    <input type="number" name="attr_costituzione">
+  </div>
+
+  <!-- SOTTOCATEGORIE -->
+  <div class="sheet-stat-row">
+    <label>PV Massimi</label>
+    <input type="number" name="attr_pv_max">
+  </div>
+
+  <div class="sheet-stat-row">
+    <label>PV Attuali</label>
+    <input type="number" name="attr_pv_att">
+  </div>
+
+  <div class="sheet-stat-row">
+    <label>PF Massimi</label>
+    <input type="number" name="attr_pf_max">
+  </div>
+
+  <div class="sheet-stat-row">
+    <label>PF Attuali</label>
+    <input type="number" name="attr_pf_att">
+  </div>
+
+  <div class="sheet-stat-row">
+    <label>Resistenza</label>
+    <input type="number" name="attr_resistenza">
+  </div>
+
+  <div class="sheet-stat-row">
+    <label>Peso Massimo</label>
+    <input type="number" name="attr_peso_max">
+  </div>
+
+  <div class="sheet-stat-row">
+    <label>Essenza</label>
+    <input type="number" name="attr_essenza">
+  </div>
+
+</div>
+
+<!-- INTELLIGENZA -->
+<div class="sheet-caratteristica">
+
+  <!-- TITOLO + VALORE PRINCIPALE -->
+  <div class="sheet-caratteristica-header">
+    <span class="sheet-caratteristica-name">Intelligenza</span>
+    <input type="number" name="attr_intelligenza">
+  </div>
+
+  <!-- SOTTOCATEGORIE -->
+  <div class="sheet-stat-row">
+    <label>Mana/Etere</label>
+    <input type="number" name="attr_mana">
+  </div>
+
+  <div class="sheet-stat-row">
+    <label>Punti Abilità</label>
+    <input type="number" name="attr_punti_abilita">
+  </div>
+
+  <div class="sheet-stat-row">
+    <label>Conoscenze</label>
+    <input type="number" name="attr_conoscenze">
+  </div>
+
+</div>
+
+<!-- PERCEZIONE -->
+<div class="sheet-caratteristica">
+
+  <!-- TITOLO + VALORE PRINCIPALE -->
+  <div class="sheet-caratteristica-header">
+    <span class="sheet-caratteristica-name">Percezione</span>
+    <input type="number" name="attr_percezione">
+  </div>
+
+  <!-- SOTTOCATEGORIE -->
+  <div class="sheet-stat-row">
+    <label>Sesto senso</label>
+    <input type="number" name="attr_sesto_senso">
+  </div>
+
+  <div class="sheet-stat-row">
+    <label>Iniziativa</label>
+    <input type="number" name="attr_iniziativa">
+  </div>
+
+</div>
+
+<!-- PRESENZA -->
+<div class="sheet-caratteristica">
+
+  <!-- TITOLO + VALORE PRINCIPALE -->
+  <div class="sheet-caratteristica-header">
+    <span class="sheet-caratteristica-name">Presenza</span>
+    <input type="number" name="attr_presenza">
+  </div>
+
+  <!-- SOTTOCATEGORIE -->
+  <div class="sheet-stat-row">
+    <label>Charme</label>
+    <input type="number" name="attr_charme">
+  </div>
+
+</div>
+
+ <!-- Fortuna -->
+<div class="sheet-caratteristica">
+
+  <!-- TITOLO + VALORE PRINCIPALE -->
+  <div class="sheet-caratteristica-header">
+    <span class="sheet-caratteristica-name">Fortuna</span>
+    <input type="number" name="attr_fortuna">
+  </div>
+
+  <!-- SOTTOCATEGORIE -->
+  <div class="sheet-stat-row">
+    <label>Tiri ripetibili</label>
+    <input type="number" name="attr_tiri_ripetibili">
+  </div>
+
+</div>
+</fieldset>
+
+
+  <!-- ABILITÀ -->
+<fieldset>
+  <legend>Abilità (clicca il nome)</legend>
+
+  <div class="sheet-abilita-grid">
+
+    <!-- Colonna 1 -->
+    <div class="sheet-abilita-item">
+      <button type="roll" value="/roll @{acrobatica}d6 + @{acrobatica_bonus}">Acrobatica</button>
+      <div class="sheet-field">
+        <label>Valore</label>
+        <input type="number" name="attr_acrobatica">
+      </div>
+      <div class="sheet-field">
+        <label>Bonus</label>
+        <input type="number" name="attr_acrobatica_bonus">
+      </div>
+    </div>
+
+    <div class="sheet-abilita-item">
+      <button type="roll" value="/roll @{addestrareanimali}d6 + @{addestrareanimali_bonus}">Addestrare Animali</button>
+      <div class="sheet-field">
+        <label>Valore</label>
+        <input type="number" name="attr_addestrareanimali">
+      </div>
+      <div class="sheet-field">
+        <label>Bonus</label>
+        <input type="number" name="attr_addestrareanimali_bonus">
+      </div>
+    </div>
+
+    <div class="sheet-abilita-item">
+      <button type="roll" value="/roll @{alchimia}d6 + @{alchimia_bonus}">Alchimia</button>
+      <div class="sheet-field">
+        <label>Valore</label>
+        <input type="number" name="attr_alchimia">
+      </div>
+      <div class="sheet-field">
+        <label>Bonus</label>
+        <input type="number" name="attr_alchimia_bonus">
+      </div>
+    </div>
+
+    <div class="sheet-abilita-item">
+      <button type="roll" value="/roll @{armaioLo}d6 + @{armaioLo_bonus}">Armaiolo</button>
+      <div class="sheet-field">
+        <label>Valore</label>
+        <input type="number" name="attr_armaiolo">
+      </div>
+      <div class="sheet-field">
+        <label>Bonus</label>
+        <input type="number" name="attr_armaiolo_bonus">
+      </div>
+    </div>
+
+    <div class="sheet-abilita-item">
+      <button type="roll" value="/roll @{artigianato}d6 + @{artigianato_bonus}">Artigianato</button>
+      <div class="sheet-field">
+        <label>Valore</label>
+        <input type="number" name="attr_artigianato">
+      </div>
+      <div class="sheet-field">
+        <label>Bonus</label>
+        <input type="number" name="attr_artigianato_bonus">
+      </div>
+    </div>
+
+    <div class="sheet-abilita-item">
+      <button type="roll" value="/roll @{atletica}d6 + @{atletica_bonus}">Atletica</button>
+      <div class="sheet-field">
+        <label>Valore</label>
+        <input type="number" name="attr_atletica">
+      </div>
+      <div class="sheet-field">
+        <label>Bonus</label>
+        <input type="number" name="attr_atletica_bonus">
+      </div>
+    </div>
+
+    <!-- Colonna 2 -->
+    <div class="sheet-abilita-item">
+      <button type="roll" value="/roll @{destrezza}d6 + @{destrezza_bonus}">Destrezza</button>
+      <div class="sheet-field">
+        <label>Valore</label>
+        <input type="number" name="attr_destrezza">
+      </div>
+      <div class="sheet-field">
+        <label>Bonus</label>
+        <input type="number" name="attr_destrezza_bonus">
+      </div>
+    </div>
+
+    <div class="sheet-abilita-item">
+      <button type="roll" value="/roll @{forzadivolonta}d6 + @{forzadivolonta_bonus}">Forza di Volontà</button>
+      <div class="sheet-field">
+        <label>Valore</label>
+        <input type="number" name="attr_forzadivolonta">
+      </div>
+      <div class="sheet-field">
+        <label>Bonus</label>
+        <input type="number" name="attr_forzadivolonta_bonus">
+      </div>
+    </div>
+
+    <div class="sheet-abilita-item">
+      <button type="roll" value="/roll @{furtivita}d6 + @{furtivita_bonus}">Furtività</button>
+      <div class="sheet-field">
+        <label>Valore</label>
+        <input type="number" name="attr_furtivita">
+      </div>
+      <div class="sheet-field">
+        <label>Bonus</label>
+        <input type="number" name="attr_furtivita_bonus">
+      </div>
+    </div>
+
+    <div class="sheet-abilita-item">
+      <button type="roll" value="/roll @{guidare}d6 + @{guidare_bonus}">Guidare</button>
+      <div class="sheet-field">
+        <label>Valore</label>
+        <input type="number" name="attr_guidare">
+      </div>
+      <div class="sheet-field">
+        <label>Bonus</label>
+        <input type="number" name="attr_guidare_bonus">
+      </div>
+    </div>
+
+    <div class="sheet-abilita-item">
+      <button type="roll" value="/roll @{ingannare}d6 + @{ingannare_bonus}">Ingannare</button>
+      <div class="sheet-field">
+        <label>Valore</label>
+        <input type="number" name="attr_ingannare">
+      </div>
+      <div class="sheet-field">
+        <label>Bonus</label>
+        <input type="number" name="attr_ingannare_bonus">
+      </div>
+    </div>
+
+    <div class="sheet-abilita-item">
+      <button type="roll" value="/roll @{ingegneria}d6 + @{ingegneria_bonus}">Ingegneria</button>
+      <div class="sheet-field">
+        <label>Valore</label>
+        <input type="number" name="attr_ingegneria">
+      </div>
+      <div class="sheet-field">
+        <label>Bonus</label>
+        <input type="number" name="attr_ingegneria_bonus">
+      </div>
+    </div>
+
+    <!-- Colonna 3 -->
+    <div class="sheet-abilita-item">
+      <button type="roll" value="/roll @{intimidire}d6 + @{intimidire_bonus}">Intimidire</button>
+      <div class="sheet-field">
+        <label>Valore</label>
+        <input type="number" name="attr_intimidire">
+      </div>
+      <div class="sheet-field">
+        <label>Bonus</label>
+        <input type="number" name="attr_intimidire_bonus">
+      </div>
+    </div>
+
+    <div class="sheet-abilita-item">
+      <button type="roll" value="/roll @{intuizione}d6 + @{intuizione_bonus}">Intuizione</button>
+      <div class="sheet-field">
+        <label>Valore</label>
+        <input type="number" name="attr_intuizione">
+      </div>
+      <div class="sheet-field">
+        <label>Bonus</label>
+        <input type="number" name="attr_intuizione_bonus">
+      </div>
+    </div>
+
+    <div class="sheet-abilita-item">
+      <button type="roll" value="/roll @{investigare}d6 + @{investigare_bonus}">Investigare</button>
+      <div class="sheet-field">
+        <label>Valore</label>
+        <input type="number" name="attr_investigare">
+      </div>
+      <div class="sheet-field">
+        <label>Bonus</label>
+        <input type="number" name="attr_investigare_bonus">
+      </div>
+    </div>
+
+    <div class="sheet-abilita-item">
+      <button type="roll" value="/roll @{legge}d6 + @{legge_bonus}">Legge</button>
+      <div class="sheet-field">
+        <label>Valore</label>
+        <input type="number" name="attr_legge">
+      </div>
+      <div class="sheet-field">
+        <label>Bonus</label>
+        <input type="number" name="attr_legge_bonus">
+      </div>
+    </div>
+
+    <div class="sheet-abilita-item">
+      <button type="roll" value="/roll @{medicina}d6 + @{medicina_bonus}">Medicina</button>
+      <div class="sheet-field">
+        <label>Valore</label>
+        <input type="number" name="attr_medicina">
+      </div>
+      <div class="sheet-field">
+        <label>Bonus</label>
+        <input type="number" name="attr_medicina_bonus">
+      </div>
+    </div>
+
+    <div class="sheet-abilita-item">
+      <button type="roll" value="/roll @{natura}d6 + @{natura_bonus}">Natura</button>
+      <div class="sheet-field">
+        <label>Valore</label>
+        <input type="number" name="attr_natura">
+      </div>
+      <div class="sheet-field">
+        <label>Bonus</label>
+        <input type="number" name="attr_natura_bonus">
+      </div>
+    </div>
+
+ <div class="sheet-abilita-item">
+  <button type="roll" value="/roll @{orientamento}d6 + @{orientamento_bonus}">Orientamento</button>
+  <div class="sheet-field">
+    <label>Valore</label>
+    <input type="number" name="attr_orientamento">
+  </div>
+  <div class="sheet-field">
+    <label>Bonus</label>
+    <input type="number" name="attr_orientamento_bonus">
+  </div>
+</div>
+
+<div class="sheet-abilita-item">
+  <button type="roll" value="/roll @{oratoria}d6 + @{oratoria_bonus}">Oratoria</button>
+  <div class="sheet-field">
+    <label>Valore</label>
+    <input type="number" name="attr_oratoria">
+  </div>
+  <div class="sheet-field">
+    <label>Bonus</label>
+    <input type="number" name="attr_oratoria_bonus">
+  </div>
+</div>
+
+<div class="sheet-abilita-item">
+  <button type="roll" value="/roll @{persuadere}d6 + @{persuadere_bonus}">Persuadere</button>
+  <div class="sheet-field">
+    <label>Valore</label>
+    <input type="number" name="attr_persuadere">
+  </div>
+  <div class="sheet-field">
+    <label>Bonus</label>
+    <input type="number" name="attr_persuadere_bonus">
+  </div>
+</div>
+
+<div class="sheet-abilita-item">
+  <button type="roll" value="/roll @{prontosoccorso}d6 + @{prontosoccorso_bonus}">Pronto Soccorso</button>
+  <div class="sheet-field">
+    <label>Valore</label>
+    <input type="number" name="attr_prontosoccorso">
+  </div>
+  <div class="sheet-field">
+    <label>Bonus</label>
+    <input type="number" name="attr_prontosoccorso_bonus">
+  </div>
+</div>
+
+<div class="sheet-abilita-item">
+  <button type="roll" value="/roll @{religione}d6 + @{religione_bonus}">Religione</button>
+  <div class="sheet-field">
+    <label>Valore</label>
+    <input type="number" name="attr_religione">
+  </div>
+  <div class="sheet-field">
+    <label>Bonus</label>
+    <input type="number" name="attr_religione_bonus">
+  </div>
+</div>
+
+<div class="sheet-abilita-item">
+  <button type="roll" value="/roll @{riparare}d6 + @{riparare_bonus}">Riparare</button>
+  <div class="sheet-field">
+    <label>Valore</label>
+    <input type="number" name="attr_riparare">
+  </div>
+  <div class="sheet-field">
+    <label>Bonus</label>
+    <input type="number" name="attr_riparare_bonus">
+  </div>
+</div>
+
+<div class="sheet-abilita-item">
+  <button type="roll" value="/roll @{scienzearcane}d6 + @{scienzearcane_bonus}">Scienze Arcane</button>
+  <div class="sheet-field">
+    <label>Valore</label>
+    <input type="number" name="attr_scienzearcane">
+  </div>
+  <div class="sheet-field">
+    <label>Bonus</label>
+    <input type="number" name="attr_scienzearcane_bonus">
+  </div>
+</div>
+
+<div class="sheet-abilita-item">
+  <button type="roll" value="/roll @{seguiretracce}d6 + @{seguiretracce_bonus}">Seguire Tracce</button>
+  <div class="sheet-field">
+    <label>Valore</label>
+    <input type="number" name="attr_seguiretracce">
+  </div>
+  <div class="sheet-field">
+    <label>Bonus</label>
+    <input type="number" name="attr_seguiretracce_bonus">
+  </div>
+</div>
+
+  </fieldset>
+
+<!-- COMBATTIMENTO: ARMI + ARMATURE | EQUIP -->
+<div class="sheet-combat-grid">
+
+  <!-- SINISTRA: ARMI + ARMATURE -->
+  <div class="sheet-combat-left">
+
+    <!-- ARMI -->
+    <fieldset class="sheet-armi">
+      <legend>Armi</legend>
+
+      <fieldset class="repeating_armi">
+
+        <div class="sheet-field field-wide">
+          <label>Nome</label>
+          <input type="text" name="attr_nome">
+        </div>
+
+        <div class="sheet-field field-small">
+          <label>Tiro</label>
+          <input type="number" name="attr_tiro">
+        </div>
+
+        <div class="sheet-field field-small">
+          <label>Bonus</label>
+          <input type="number" name="attr_bonustiro">
+        </div>
+
+        <button 
+          type="roll" 
+          name="roll_tiro" 
+          value="/roll @{tiro}d6 + @{bonustiro}">
+            ⚔️
+        </button>
+
+        <div class="sheet-field field-small">
+          <label>Danno</label>
+          <input type="number" name="attr_danno">
+        </div>
+
+        <div class="sheet-field field-small">
+          <label>Bonus</label>
+          <input type="number" name="attr_bonus">
+        </div>
+
+        <div class="sheet-field field-wide">
+          <label>Tipo</label>
+          <input type="text" name="attr_tipo">
+        </div>
+
+        <button
+          type="roll"
+          name="roll_danno"
+          value="&{template:default} {{name=@{nome}}} {{Danno=[[ @{danno}d6 + @{bonus} ]]}} {{Tipo=@{tipo}}}">
+          ⚔️
+        </button>
+
+      </fieldset>
+    </fieldset>
+    <fieldset class="sheet-armi">
+      <legend>Armi</legend>
+
+      <fieldset class="repeating_armi">
+
+        <div class="sheet-field field-wide">
+          <label>Nome</label>
+          <input type="text" name="attr_nome">
+        </div>
+
+        <div class="sheet-field field-small">
+          <label>Tiro</label>
+          <input type="number" name="attr_tiro">
+        </div>
+
+        <button type="roll" name="roll_tiro" value="/roll @{tiro}d6"></button>
+
+        <div class="sheet-field field-small">
+          <label>Danno</label>
+          <input type="number" name="attr_danno">
+        </div>
+
+        <div class="sheet-field field-small">
+          <label>Bonus</label>
+          <input type="number" name="attr_bonus">
+        </div>
+
+        <div class="sheet-field field-wide">
+          <label>Tipo</label>
+          <input type="text" name="attr_tipo">
+        </div>
+
+        <button
+          type="roll"
+          name="roll_danno"
+          value="&{template:default} {{name=@{nome}}} {{Danno=[[ @{danno}d6 + @{bonus} ]]}} {{Tipo=@{tipo}}}">
+          ⚔️
+        </button>
+
+      </fieldset>
+    </fieldset>
+
+    <!-- ARMATURE -->
+    <fieldset class="sheet-armature">
+      <legend>Armature</legend>
+
+      <fieldset class="repeating_armature">
+
+        <div class="sheet-field field-wide">
+          <label>Nome</label>
+          <input type="text" name="attr_armatura_nome">
+        </div>
+
+        <div class="sheet-field field-small">
+          <label>Val. Max</label>
+          <input type="number" name="attr_armatura_max">
+        </div>
+
+        <div class="sheet-field field-small">
+          <label>Val. Att</label>
+          <input type="number" name="attr_armatura_att">
+        </div>
+
+      </fieldset>
+    </fieldset>
+
+  </div>
+
+  <!-- DESTRA: EQUIP -->
+  <fieldset class="sheet-equipaggiamento">
+    <legend>Equipaggiamento</legend>
+
+    <fieldset class="repeating_equipaggiamento">
+
+      <div class="sheet-field field-wide">
+        <label>Nome</label>
+        <input type="text" name="attr_eq_nome">
+      </div>
+
+      <div class="sheet-field field-small">
+        <label>Qtà</label>
+        <input type="number" name="attr_eq_qta">
+      </div>
+
+      <div class="sheet-field field-small">
+        <label>Peso</label>
+        <input type="number" name="attr_eq_peso">
+      </div>
+
+    </fieldset>
+
+    <div class="sheet-field field-small">
+      <label>Peso Totale</label>
+      <input type="number" name="attr_peso_totale" disabled>
+    </div>
+
+  </fieldset>
+
+</div>
