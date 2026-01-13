@@ -691,34 +691,36 @@
 
   </div>
 
-  <!-- DESTRA: EQUIP -->
-  <fieldset class="sheet-equipaggiamento">
-    <legend>Equipaggiamento</legend>
+<!-- DESTRA: EQUIP -->
+<fieldset class="sheet-equipaggiamento">
+  <legend>Equipaggiamento</legend>
 
-    <fieldset class="repeating_equipaggiamento">
-
-      <div class="sheet-field field-wide">
-        <label>Nome</label>
-        <input type="text" name="attr_eq_nome">
-      </div>
-
-      <div class="sheet-field field-small">
-        <label>Qtà</label>
-        <input type="number" name="attr_eq_qta">
-      </div>
-
-      <div class="sheet-field field-small">
-        <label>Peso</label>
-        <input type="number" name="attr_eq_peso">
-      </div>
-
-    </fieldset>
-
-    <div class="sheet-field field-small">
-      <label>Peso Totale</label>
-      <input type="number" name="attr_peso_totale" disabled>
+  <!-- REPEATING EQUIP -->
+  <fieldset class="repeating_equipaggiamento">
+    <div class="sheet-field field-wide">
+      <label>Nome</label>
+      <input type="text" name="attr_eq_nome">
     </div>
 
+    <div class="sheet-field field-small">
+      <label>Peso unitario</label>
+      <input type="number" name="attr_eq_peso_unitario" min="0" step="0.1">
+    </div>
+
+    <div class="sheet-field field-small">
+      <label>Qtà</label>
+      <input type="number" name="attr_eq_qta" min="0" step="1">
+    </div>
+
+    <div class="sheet-field field-small">
+      <label>Peso totale</label>
+      <input type="number" name="attr_eq_peso_totale" disabled>
+    </div>
   </fieldset>
 
-</div>
+  <!-- PESO TOTALE DI TUTTI GLI OGGETTI -->
+  <div class="sheet-field field-small">
+    <label>Peso complessivo</label>
+    <input type="number" name="attr_peso_complessivo" disabled>
+  </div>
+</fieldset>
