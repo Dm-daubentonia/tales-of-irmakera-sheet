@@ -565,10 +565,10 @@
 
   </fieldset>
 
-<!-- COMBATTIMENTO: ARMI + ARMATURE | EQUIP -->
+<!-- CONTENITORE COMBATTIMENTO -->
 <div class="sheet-combat-grid">
 
-  <!-- SINISTRA: ARMI + ARMATURE -->
+  <!-- SINISTRA: Armi e Armature -->
   <div class="sheet-combat-left">
 
     <!-- ARMI -->
@@ -576,7 +576,6 @@
       <legend>Armi</legend>
 
       <fieldset class="repeating_armi">
-
         <div class="sheet-field field-wide">
           <label>Nome</label>
           <input type="text" name="attr_nome">
@@ -587,17 +586,7 @@
           <input type="number" name="attr_tiro">
         </div>
 
-        <div class="sheet-field field-small">
-          <label>Bonus</label>
-          <input type="number" name="attr_bonustiro">
-        </div>
-
-        <button 
-          type="roll" 
-          name="roll_tiro" 
-          value="/roll @{tiro}d6 + @{bonustiro}">
-            ⚔️
-        </button>
+        <button type="roll" name="roll_tiro" value="/roll @{tiro}d6">🎯</button>
 
         <div class="sheet-field field-small">
           <label>Danno</label>
@@ -614,54 +603,8 @@
           <input type="text" name="attr_tipo">
         </div>
 
-        <button
-          type="roll"
-          name="roll_danno"
-          value="&{template:default} {{name=@{nome}}} {{Danno=[[ @{danno}d6 + @{bonus} ]]}} {{Tipo=@{tipo}}}">
-          ⚔️
-        </button>
-
-      </fieldset>
-    </fieldset>
-    <fieldset class="sheet-armi">
-      <legend>Armi</legend>
-
-      <fieldset class="repeating_armi">
-
-        <div class="sheet-field field-wide">
-          <label>Nome</label>
-          <input type="text" name="attr_nome">
-        </div>
-
-        <div class="sheet-field field-small">
-          <label>Tiro</label>
-          <input type="number" name="attr_tiro">
-        </div>
-
-        <button type="roll" name="roll_tiro" value="/roll @{tiro}d6"></button>
-
-        <div class="sheet-field field-small">
-          <label>Danno</label>
-          <input type="number" name="attr_danno">
-        </div>
-
-        <div class="sheet-field field-small">
-          <label>Bonus</label>
-          <input type="number" name="attr_bonus">
-        </div>
-
-        <div class="sheet-field field-wide">
-          <label>Tipo</label>
-          <input type="text" name="attr_tipo">
-        </div>
-
-        <button
-          type="roll"
-          name="roll_danno"
-          value="&{template:default} {{name=@{nome}}} {{Danno=[[ @{danno}d6 + @{bonus} ]]}} {{Tipo=@{tipo}}}">
-          ⚔️
-        </button>
-
+        <button type="roll" name="roll_danno"
+                value="&{template:default} {{name=@{nome}}} {{Danno=[[ @{danno}d6 + @{bonus} ]]}} {{Tipo=@{tipo}}}">⚔️</button>
       </fieldset>
     </fieldset>
 
@@ -669,58 +612,52 @@
     <fieldset class="sheet-armature">
       <legend>Armature</legend>
 
+      <div class="sheet-armature-header">
+        <span>Nome</span>
+        <span>Valore Max</span>
+        <span>Valore Attuale</span>
+      </div>
+
       <fieldset class="repeating_armature">
-
-        <div class="sheet-field field-wide">
-          <label>Nome</label>
-          <input type="text" name="attr_armatura_nome">
-        </div>
-
-        <div class="sheet-field field-small">
-          <label>Val. Max</label>
-          <input type="number" name="attr_armatura_max">
-        </div>
-
-        <div class="sheet-field field-small">
-          <label>Val. Att</label>
-          <input type="number" name="attr_armatura_att">
-        </div>
-
+        <input type="text" name="attr_armatura_nome">
+        <input type="number" name="attr_armatura_max">
+        <input type="number" name="attr_armatura_att">
       </fieldset>
     </fieldset>
 
   </div>
 
-<!-- DESTRA: EQUIP -->
-<fieldset class="sheet-equipaggiamento">
-  <legend>Equipaggiamento</legend>
+  <!-- DESTRA: Equipaggiamento -->
+  <fieldset class="sheet-equipaggiamento">
+    <legend>Equipaggiamento</legend>
 
-  <!-- REPEATING EQUIP -->
-  <fieldset class="repeating_equipaggiamento">
-    <div class="sheet-field field-wide">
-      <label>Nome</label>
-      <input type="text" name="attr_eq_nome">
+    <!-- Header colonna -->
+    <div class="sheet-equip-header">
+      <span>Nome</span>
+      <span>Peso unitario</span>
+      <span>Qtà</span>
+      <span>Peso totale</span>
     </div>
 
-    <div class="sheet-field field-small">
-      <label>Peso unitario</label>
-      <input type="number" name="attr_eq_peso_unitario" min="0" step="0.1">
-    </div>
+    <fieldset class="repeating_equipaggiamento">
+      <div class="sheet-field field-wide">
+        <input type="text" name="attr_eq_nome">
+      </div>
+      <div class="sheet-field field-small">
+        <input type="number" name="attr_eq_peso_unitario" min="0" step="0.1">
+      </div>
+      <div class="sheet-field field-small">
+        <input type="number" name="attr_eq_qta" min="0" step="1">
+      </div>
+      <div class="sheet-field field-small">
+        <input type="number" name="attr_eq_peso_totale" disabled>
+      </div>
+    </fieldset>
 
     <div class="sheet-field field-small">
-      <label>Qtà</label>
-      <input type="number" name="attr_eq_qta" min="0" step="1">
-    </div>
-
-    <div class="sheet-field field-small">
-      <label>Peso totale</label>
-      <input type="number" name="attr_eq_peso_totale" disabled>
+      <label>Peso complessivo</label>
+      <input type="number" name="attr_peso_complessivo" disabled>
     </div>
   </fieldset>
 
-  <!-- PESO TOTALE DI TUTTI GLI OGGETTI -->
-  <div class="sheet-field field-small">
-    <label>Peso complessivo</label>
-    <input type="number" name="attr_peso_complessivo" disabled>
-  </div>
-</fieldset>
+</div>
